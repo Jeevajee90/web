@@ -1,0 +1,100 @@
+.cont{
+  background-color: rgba(255, 255, 255, 0.752);
+  margin-top: 60px;
+  height: 700px;
+  
+
+}
+.navbar1{
+  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.register_form{
+  background-color: rgba(255, 255, 255, 0.556);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),0 4px 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+#reg-div{
+  background-color: rgba(255, 255, 255, 0.499);
+  padding: 50px;
+  
+}
+
+#prof:hover{
+   color: black;
+}
+#usernames{
+  color: black;
+}
+
+.sign{
+  text-decoration: none;
+}
+
+/* profile page css code */
+#profss{
+  margin-top: 90px;
+}
+.imgs{
+  border-radius: 50px;
+}
+#names{
+  color: white;
+  margin-left: 15px;
+}
+.ip{
+  border-radius: 50px;
+  margin-top: 15px;
+}
+a{
+  text-decoration: none;
+}
+.cont{
+  padding: 20px;
+  padding-left: 90px;
+}
+.index-card{
+  border-radius: 5px;
+  border: 1PX solid white;
+}
+video{
+  border-radius: 6px;
+}
+
+.sidebar{
+  
+  
+  width: 80px;
+  height: 600px;
+  text-align: center;
+  
+}
+.plusbars{
+  margin-top: 40px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border: none;
+  background-color: white;
+  border-radius: 5px;
+  
+
+}
+.plusbars:hover{
+  background-color: rgba(135, 134, 134, 0.467);
+}
+.btnbar{
+  border: none;
+  background-color: white;
+}
+.btnbar:hover{
+  background-color: rgba(135, 134, 134, 0.467);
+}
+.navbar{
+  margin-left:90px ;
+}
+#ipps{
+  color: aliceblue;
+  
+}
