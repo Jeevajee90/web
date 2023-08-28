@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="{%  url 'home'%}"><i class="fa fa-leaf"></i> Like</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ms-auto">
+        {% if request.user.is_authenticated %}
+         <a class="nav-link" href="{% url 'profile' %}"><h4><i class="fa fa-user" id="prof"></i></h4></a>
+         
+        {% else %}
+          <a class="nav-link sin" href="{% url 'register' %}">Sign In</a>
+          <a class="nav-link sup" href="{% url 'login_page' %}">Sign Up</a>
+        {% endif %}  
+      </div>
+    </div>
+  </div>
+</nav>

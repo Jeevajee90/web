@@ -1,0 +1,27 @@
+{% extends './layout/main.html' %}
+
+{% block title %}
+home page
+{% endblock title %}
+
+{% block content %}
+<div class="cont">
+    <div class="row">
+        {% for video in datas %}
+        <div class="col-md-3 col-lg-3">
+         <div class="card my-5 index-card">
+          <video controls="controls" src="{{video.file.url}}" class="card-image-top" alt="{{video}}"></video>
+          
+          <a href="{{ video.file.url}}">
+          <div class="card-body">
+            <a href="#">{{ video.user.username }}</a>
+            <br>
+           <p class="card-text text-dark">{{ video.description }}</p>
+          </div>
+         </a>
+         </div>
+      </div>
+      {% endfor %}
+      </div>
+</div>
+{% endblock content%}

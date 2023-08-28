@@ -1,0 +1,39 @@
+{% extends 'poster/layout/main.html' %}
+{% block title %}
+  upload 
+{% endblock title %}
+
+{% block content %}
+
+<div id="reg-div" class="container " style="margin-top:70px">
+  <div class="row">
+   <div class="col-12">
+       <h4 class='mb-3'>upload</h4>
+       {% include './inc/message.html' %}
+   </div>
+  </div>
+  <section class="py-4 my-5">
+  <div class="container ">
+   <div class="row">
+       <div class="col-6">
+           <form method="POST" enctype="multipart/form-data">
+              {% csrf_token %}
+              <div class="mb-4">
+                <input type="file" name="video">
+            
+              </div>       
+              <div class="mb-4">
+                <textarea name="text_data" rows="4" cols="50"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Upload</button>
+           </form>
+          
+       </div>
+       
+   </div>
+  </div>
+ </section>
+  </div>
+
+
+{% endblock content %}

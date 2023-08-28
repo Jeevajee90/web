@@ -1,0 +1,64 @@
+{% extends 'poster/layout/main.html' %}
+
+{% block title%}
+profile
+
+{% endblock title%}
+
+{% block content %}
+
+<div class="container bootstrap snippets bootdey" id="profss">
+  <div class="row">
+    <div class="profile-nav col-md-12">
+        <div class="panel">
+          <div class="bg-white shadow rounded overflow-hidden">
+            <div class="px-4 pt-0 pb-4 bg-dark">
+                <div class="media align-items-end user-heding">
+                    <div class="user-heding round"><img class="" src="{{ photo.photo.url }}" alt="..." />
+                      </div>
+                    <div class="media-body mb-5 text-white">
+                        <h4 class="mt-0 mb-0" id="names">{{ user.username }}</h4>
+                        <p class="small mb-4"> <i class=""></i></p>
+                        <a class="nav-link sin" href="{% url 'sign_out' %}">Sign out</a>
+                    </div>
+                </div>
+            </div>
+           
+
+            <div class="bg-light p-4 d-flex justify-content-end text-center">
+              <ul class="list-inline mb-0">
+                  <li class="list-inline-item">
+                      
+                      <a href="{% url 'uploads' %}" class="btn btn-dark btn-sm btn-block"><i class="fa fa-plus"> Add</i></a>
+                  </li>
+                 
+              </ul>
+          </div>
+
+            <div class="py-4 px-4">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                    <h5 class="mb-0">Recent photos</h5><a href="#" class="btn btn-link text-muted">Show all</a>
+                </div>
+                <div class="row">
+                  {% for video in videos %}
+                  <div class="col-md-4 col-lg-3">
+                   <div class="card my-5">
+                    <video controls="controls" src="{{video.file.url}}" class="card-image-top" alt="{{video}}"></video>
+                    
+                    <a href="{{ video.file.url}}">
+                    <div class="card-body">
+                     <p class="card-text text-dark">{{ video.description }}</p>
+                    </div>
+                   </a>
+                   </div>
+                </div>
+                {% endfor %}
+                </div>
+               
+            </div>
+        </div><!-- End profile widget -->
+        </div>
+  </div>
+  </div>
+
+{% endblock content%}
